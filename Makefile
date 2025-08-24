@@ -1,5 +1,5 @@
 CC := g++
-CXXFLAGS := -std=c++17 -Wall -Wextra -O2 -fno-common
+CXXFLAGS := -std=c++17 -Wall -Wextra -O2 -fno-common -g
 
 NAME := rvcc
 
