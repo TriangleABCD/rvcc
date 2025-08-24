@@ -1,8 +1,16 @@
-#include <iostream>
 #include <cstdio>
 #include <cstdlib>
 
 int main(int argc, char ** argv) {
-  printf("Hello, rvcc !\n");
+  if (argc != 2) {
+    fprintf(stderr, "Usage: %s <number>\n", argv[0]);
+    return 1;
+  }
+
+  printf("  .globl main\n");
+  printf("main:\n");
+  printf("  li a0, %d\n", atoi(argv[1]));
+  printf("  ret\n");
+
   return 0;
 }
